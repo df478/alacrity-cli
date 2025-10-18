@@ -1,0 +1,77 @@
+{
+  "name": "alacrity",
+  "version": "1.0.0",
+  "description": "CLI tool for AlaCrity. See AlaCrity.com for more details.",
+  "main": "./built/commands/alacrity.js",
+  "scripts": {
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "formatter": "prettier --check ./src/**/*.ts",
+    "formatter-write": "prettier --write ./src/**/*.ts",
+    "build": "npm run tslint && rm -rf ./built && npx tsc && chmod -R +x ./built "
+  },
+  "bin": {
+    "alacrity": "./built/commands/alacrity.js",
+    "alacrity-deploy": "./built/commands/deploy.js",
+    "alacrity-list": "./built/commands/list.js",
+    "alacrity-login": "./built/commands/login.js",
+    "alacrity-logout": "./built/commands/logout.js",
+    "alacrity-serversetup": "./built/commands/serversetup.js",
+    "alacrity-api": "./built/commands/api.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/df478/alacrity-cli"
+  },
+  "keywords": [
+    "Docker",
+    "Automated",
+    "Deployment",
+    "Heroku",
+    "Free",
+    "NodeJS",
+    "PHP",
+    "Nginx",
+    "Server",
+    "Container"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "author": "Alacrity",
+  "license": "Apache-2.0",
+  "lint-staged": {
+    "./**/*.{js}": [
+      "co-eslint",
+      "co-prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "command-exists": "^1.2.9",
+    "commander": "^12.1.0",
+    "configstore": "^7.0.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^6.5.0",
+    "js-yaml": "^4.1.0",
+    "ora": "^8.1.1",
+    "progress": "^2.0.3",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "update-notifier": "^7.3.1"
+  },
+  "devDependencies": {
+    "@types/command-exists": "^1.2.3",
+    "@types/configstore": "^6.0.2",
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^6.5.0",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.1.0",
+    "@types/progress": "^2.0.7",
+    "@types/request-promise": "^4.1.51",
+    "@types/update-notifier": "^6.0.8",
+    "prettier": "^3.4.2",
+    "tslint": "^5.20.1",
+    "typescript": "^5.7.2"
+  }
+}
