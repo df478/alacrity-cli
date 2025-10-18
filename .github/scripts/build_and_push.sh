@@ -18,7 +18,7 @@ fi
 
 
 ALACRITY_VERSION=1.0.0
-IMAGE_NAME=alacrity/cli-alacrity
+IMAGE_NAME=df478/cli-alacrity
 
 echo $IMAGE_NAME
 echo $ALACRITY_VERSION
