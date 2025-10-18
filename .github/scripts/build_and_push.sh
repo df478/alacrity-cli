@@ -17,8 +17,11 @@ else
 fi
 
 
-ALACRITY_VERSION=edge
+ALACRITY_VERSION=1.0.0
 IMAGE_NAME=alacrity/cli-alacrity
+
+echo $IMAGE_NAME
+echo $ALACRITY_VERSION
 
 if [ ! -f ./package-lock.json ]; then
     echo "package-lock.json not found!"
@@ -45,5 +48,5 @@ docker buildx ls
 docker buildx create --name mybuilder
 docker buildx use mybuilder
 
-docker buildx build --platform linux/amd64,linux/arm64,linux/arm -t $IMAGE_NAME:$ALACRITY_VERSION -f Dockerfile --push .
+docker buildx build --platform linux/amd64,linux/arm64,linux/arm -t $IMAGE_NAME:$ALACRITY_VERSION -t $IMAGE_NAME:latest -f Dockerfile --push .
 
