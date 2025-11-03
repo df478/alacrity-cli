@@ -1,6 +1,6 @@
 {
   "name": "alacrity-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CLI tool for AlaCrity. See AlaCrity.com for more details.",
   "main": "./built/commands/alacrity.js",
   "scripts": {
