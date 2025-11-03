@@ -196,7 +196,7 @@ export default class Deploy extends Command {
         },
         {
             name: K.appToken,
-            char: 't',
+            char: 'k',
             env: 'ALACRITY_APP_TOKEN',
             message: 'app Token',
             type: 'input',

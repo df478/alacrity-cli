@@ -2,7 +2,6 @@
 
 // tslint:disable-next-line: no-var-requires
 const packagejson = require('../../package.json')
-import updateNotifier from 'update-notifier'
 
 const versionOfNode = Number(process.version.split('.')[0])
 
@@ -12,8 +11,6 @@ if (versionOfNode < 8) {
     )
     process.exit(1)
 }
-
-updateNotifier({ pkg: packagejson }).notify({ isGlobal: true })
 
 import StdOutUtil from '../utils/StdOutUtil'
 import { program } from 'commander'

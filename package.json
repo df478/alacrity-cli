@@ -1,5 +1,5 @@
 {
-  "name": "alacrity",
+  "name": "alacrity-cli",
   "version": "1.0.0",
   "description": "CLI tool for AlaCrity. See AlaCrity.com for more details.",
   "main": "./built/commands/alacrity.js",
