@@ -1,7 +1,7 @@
 import * as fs from 'fs-extra'
 import * as path from 'path'
 import { exec, ExecException } from 'child_process'
-import * as ProgressBar from 'progress'
+import ProgressBar = require('progress')
 import StdOutUtil from '../utils/StdOutUtil'
 import SpinnerHelper from '../utils/SpinnerHelper'
 import IBuildLogs from '../models/IBuildLogs'
